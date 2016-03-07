@@ -9,11 +9,6 @@
 	{
 		public function MessageSpinner ()
 		{
-			// Invert colour for Linx
-			if (Environment.isLinx)
-			{
-				spinner.transform.colorTransform = new ColorTransform(-1,-1,-1,1,255,255,255,0);
-			}
 		}
 	}
 }

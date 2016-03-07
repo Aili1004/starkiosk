@@ -85,10 +85,7 @@ package com.snepo.givv.cardbrowser.view.overlays
 			if ( mode == BALANCE_CHECK )
 			{
 				titleField.text = "Check Balance";
-				if (Environment.isLinx)
-					blurbField.text = "Please insert and remove your LINX card to check your card balance.";
-				else
-					blurbField.text = "Please insert and remove your GiVV cash card or GiVV gift card to check your card balance.\n\nIt's best to check your balance before using your card.";
+				blurbField.text = "Please insert and remove your GiVV cash card or GiVV gift card to check your card balance.\n\nIt's best to check your balance before using your card.";
 				blurbField.height = blurbField.textHeight + 5;
 				cancelBtn.enabled = false;
 				anim.y = 310;

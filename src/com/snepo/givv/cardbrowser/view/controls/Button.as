@@ -101,13 +101,6 @@ package com.snepo.givv.cardbrowser.view.controls
 			addChild ( highlightMask = new Sprite() );
 			bottomHighlight.mask = highlightMask;
 
-			if (Environment.isLinx)
-			{
-				topHighlight.visible = bottomHighlight.visible = false;
-				var corner : int = Environment.selectButtonCorner;
-				cornerRadii = { tl : corner, tr : corner, bl : corner, br : corner };
-			}
-
 			invalidate();
 
 		}
@@ -379,7 +372,7 @@ package com.snepo.givv.cardbrowser.view.controls
 			topHighlight.width = width - 4;
 
 			labelField.x = width / 2 - labelField.width / 2;
-			labelField.y = height / 2 - labelField.height / 2 + (Environment.isLinx ? 2 : -2);
+			labelField.y = height / 2 - labelField.height / 2 + (-2);
 
 			if ( icon )
 			{

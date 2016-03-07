@@ -101,14 +101,15 @@ package com.snepo.givv.cardbrowser.view.controls
 				case IDLE :
 				{
 					TweenMax.to ( this, 0.3, { alpha : 0.5 } );
-					TweenMax.to ( amountField, 0.3, { tint : (Environment.isLinx ? 0xFFFFFF : 0x000000) } );
+					TweenMax.to ( amountField, 0.3, { tint : 0x000000 } );
 					break;
 				}
 
 				case PROCESSING :
 				{
 					TweenMax.to ( this, 0.3, { alpha : 1 } );
-					TweenMax.to ( amountField, 0.3, { tint : (Environment.isLinx ? 0x000000 : 0xFFFFFF) } );
+					TweenMax.to ( amountField, 0.3, { tint : 0xFFFFFF } );
+
 					TweenMax.to ( spinIcon, 0.3, { autoAlpha : 1, scaleX : 1, scaleY : 1, ease : Back.easeOut } );
 					startSpinning();
 

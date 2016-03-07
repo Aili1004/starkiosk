@@ -35,8 +35,7 @@ package com.snepo.givv.cardbrowser.view.controls
 			super.createUI ( );
 
 			editBtn.label = "Edit";
-			if (!Environment.isLinx)
-				editBtn.icon = new EditIcon();
+			editBtn.icon = new EditIcon();
 			editBtn.addEventListener ( MouseEvent.MOUSE_DOWN, notifyInteraction );
 
 			contentHolder = new Sprite();
@@ -83,15 +82,13 @@ package com.snepo.givv.cardbrowser.view.controls
 			if ( !data.isMax )
 			{
 				editBtn.label = "Edit";
-				if (!Environment.isLinx)
-					editBtn.icon = new EditIcon();
+				editBtn.icon = new EditIcon();
 				editBtn.applySelection();
 				editBtn.redraw();
 			}else
 			{
 				editBtn.label = "Del.";
-				if (!Environment.isLinx)
-					editBtn.icon = new DeleteIcon();
+				editBtn.icon = new DeleteIcon();
 				editBtn.offFillColor = 0xBD0000; // Red
 				editBtn.applySelection();
 				editBtn.redraw();

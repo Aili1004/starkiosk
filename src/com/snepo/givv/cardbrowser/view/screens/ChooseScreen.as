@@ -35,7 +35,6 @@
 			_width = View.APP_WIDTH;
 			_height = View.APP_HEIGHT;
 
-			/*_prompt = Environment.isLinx ? "Choose your value" : "Choose your products";*/
 		}
 
 		override protected function createUI ( ) : void

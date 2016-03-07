@@ -25,7 +25,6 @@ package com.snepo.givv.cardbrowser.util
 		public static var SESSION_EXTENSION_TIMEOUT : int = 45;
 
 		public static var COMPANY_GIVV : String = 'GiVV';
-		public static var COMPANY_LINX : String = 'Linx';
 
 		public static var RELEASE_PATH : String = "P:\\givv-frontend\\Release\\";
 		public static var RELEASE : String;
@@ -40,8 +39,6 @@ package com.snepo.givv.cardbrowser.util
 			// Initialise static variables
 			if (stage.loaderInfo.url.toLowerCase().indexOf ( "givvkiosk." ) > -1)
 				_company = COMPANY_GIVV;
-			else if (stage.loaderInfo.url.toLowerCase().indexOf ( "linxkiosk." ) > -1)
-				_company = COMPANY_LINX;
 			_operatingSystem = Capabilities.os.toLowerCase().indexOf ( "win" ) > -1 ? WINDOWS : MACOSX;
 			_isDevelopment = stage.loaderInfo.url.indexOf ( "/Documents/source/flash/givvkiosk/bin/" ) > -1;
 		}
@@ -71,11 +68,6 @@ package com.snepo.givv.cardbrowser.util
 			return _company == COMPANY_GIVV;
 		}
 
-		public static function get isLinx ( ) : Boolean
-		{
-			return _company == COMPANY_LINX;
-		}
-
 		public static function get isDevelopment ( ) : Boolean
 		{
 			return _isDevelopment;
@@ -83,167 +75,106 @@ package com.snepo.givv.cardbrowser.util
 
 		public static function get font( ) : Font
 		{
-			/*if (isLinx)
-				return new GothamMedium();
-			else
-				return new Museo500();*/
-				return new VAGRounded();
+			return new Museo500();
 		}
 
 		public static function get buttonFont( ) : Font
 		{
-			/*if (isLinx)
-				return new GothamMedium();
-			else
-				return new VAGRounded();*/
-				return new VAGRounded();
+			return new VAGRounded();
 		}
 
 		public static function get blueButtonColor( ) : int
 		{
-			if (isLinx)
-				return 0x65A8BE;
-			else
-				return 0x169CD4;
+			return 0x169CD4;
 		}
 
 		public static function get blueButtonFooterColor( ) : int
 		{
-			if (isLinx)
-				return 0xFFFFFF;
-			else
-				return 0x1D3265;
+			return 0x1D3265;
 		}
 
 		public static function get blueButtonSelectColor( ) : int
 		{
-			if (isLinx)
-				return 0x8AA929; //0xA1DDB7;
-			else
-				return 0x169CD4;
+			return 0x169CD4;
 		}
 
 		public static function get blueButtonSelectText( ) : String
 		{
-			if (isLinx)
-				return "PURCHASE";
-			else
-				return "SELECT";
+			return "SELECT";
 		}
 
 		public static function get yellowButtonColor( ) : int
 		{
-			if (isLinx)
-				return 0x717171;
-			else
-				return 0xFFD435;
+			return 0xFFD435;
 		}
 
 		public static function get yellowButtonMiddleColor( ) : int
 		{
-			if (isLinx)
-				return 0xFFFFFF;
-			else
-				return 0x7E2013;
+			return 0x7E2013;
 		}
 
 		public static function get yellowButtonFooterColor( ) : int
 		{
-			if (isLinx)
-				return 0xFFFFFF;
-			else
-				return 0xA42321;
+			return 0xA42321;
 		}
 
 		public static function get yellowButtonSelectColor( ) : int
 		{
-			if (isLinx)
-				return 0x8AA929; //0xA1DDB7;
-			else
-				return 0xFFD435;
+			return 0xFFD435;
 		}
 
 		public static function get yellowButtonSelectText( ) : String
 		{
-			if (isLinx)
-				return "RELOAD";
-			else
-				return "SELECT";
+			return "SELECT";
 		}
 
 		public static function get homeButtonMiddleTextY( ) : int
 		{
-			if (isLinx)
-				return 250;
-			else
-				return 225;
+			return 225;
 		}
 
 		public static function get selectButtonCorner( ) : int
 		{
-			if (isLinx)
-				return 70;
-			else
-				return 10;
+			return 10;
 		}
 
 		public static function get selectButtonFontSize( ) : int
 		{
-			if (isLinx)
-				return 24;
-			else
-				return 38;
+			return 38;
 		}
 
 		public static function get selectButtonFontLetterSpacing( ) : int
 		{
-			if (isLinx)
-				return 5;
-			else
-				return 0;
+			return 0;
 		}
 
 		public static function get forwardButtonColor( ) : int
 		{
-			if (isLinx)
-				return 0x6c8e17; //0xA1DDB7
-			else
-				return 0x6c8e17;
+			return 0x6c8e17;
 		}
 
 		public static function get chooseScreenInstructionText( ) : String
 		{
-			if (isLinx)
-				return '';
-			else
-				/*return 'Touch Card To Select'*/
-				return '';
+			return '';
 		}
 
 		public static function get overlayTextColor( ) : int
 		{
-			if (isLinx)
-				return 0xffffff;
-			else
-				return 0x000000;
+			return 0x000000;
 		}
 
 		public static function get hostAddress( ) : String
 		{
-			if (isLinx)
-				return "https://cms.linxkiosk.com";
-			else
-				return "https://cms.givvkiosk.com";
+			return "https://cms.givvkiosk.com";
 		}
 
 		public static function get dropboxPath( ) : String
 		{
 			// Build path
 			var rootDirName : String = null;
-			if (isLinx)
-				rootDirName = "linx-kiosk-cms";
-			else
-				rootDirName = "givv-kiosk-cms";
+
+			rootDirName = "givv-kiosk-cms";
+
 			// Exit now if unknown application name
 			if (rootDirName == null)
 				return null;
@@ -256,26 +187,17 @@ package com.snepo.givv.cardbrowser.util
 
 		public static function get noteTitle( ) : String
 		{
-			if (isLinx)
-				return 'CASH';
-			else
-				return 'NOTES'
+			return 'NOTES';
 		}
 
 		public static function get noteDenominations( ) : Array
 		{
-			if (isLinx)
-				return [5, 10, 20, 50, 100];
-			else
-				return [5, 10, 20, 50, 100];
+			return [5, 10, 20, 50, 100];
 		}
 
 		public static function get printingScreenPrompt( ) : String
 		{
-			if (isLinx)
-				return "Loading Your Linx Card";
-			else
-				return "Printing your gift card";
+			return "Printing your gift card";
 		}
 
 		public static function forceGC ( ) : void

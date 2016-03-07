@@ -80,10 +80,7 @@
 			if (mode == BALANCE_CHECK)
 			{
 				promptField.text = "Check Balance\n\n";
-				if (Environment.isLinx)
-					promptField.appendText("Please scan your LINX card to check your card balance.");
-				else
-					promptField.appendText("Please scan your GiVV cash card or GiVV gift card to check your card balance.");
+				promptField.appendText("Please scan your GiVV cash card or GiVV gift card to check your card balance.");
 				barcode.addEventListener ( BarcodeEvent.SCAN, handleScanToCheckBalance, false, 100, true );
 			}
 			else

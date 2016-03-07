@@ -1,0 +1,789 @@
+<errors>
+  <error>
+    <code>100</code>
+    <level>fatal</level>
+    <description>error_loading_stock</description>
+    <title>Error</title>
+    <message>Cannot load stock from database.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="SO WHAT" action="showScreen" data="View.CHOOSE_SCREEN" />
+      </buttons>
+      <timeout>0</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>101</code>
+    <level>error</level>
+    <description>error_loading_configuration</description>
+    <title>Error</title>
+    <message>Cannot load configuration.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="reset" data=""/>
+        <button label="CANCEL" action="noop" data="" />
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>102</code>
+    <level>error</level>
+    <description>error_connecting_to_print_mock</description>
+    <title>Error</title>
+    <message>Cannot connect to printer mocking service</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="showScreen" data="View.CHOOSE_SCREEN" />
+        <button label="CANCEL" action="showScreen" data="View.PRINTING_SCREEN" />
+        <button label="RETRY" action="showScreen" data="View.CONFIRM_SCREEN" />
+      </buttons>
+      <timeout>3</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>103</code>
+    <level>error</level>
+    <description>attempted_to_print_empty_queue</description>
+    <title>Whoops!</title>
+    <message>You attempted to print an empty queue. How did you get to this screen without adding anything to your cart?</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="SORRY" action="showScreen" data="View.CHOOSE_SCREEN" />
+      </buttons>
+      <timeout>3</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>104</code>
+    <level>error</level>
+    <description>unrecognized_scan</description>
+    <title>Whoops!</title>
+    <message>Gift card not recognized</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" />
+      </buttons>
+      <timeout>3</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>105</code>
+    <level>warning</level>
+    <description>too_many_cards</description>
+    <title>Whoops!</title>
+    <message>Maximum of ${max_cards} cards per transaction</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" />
+      </buttons>
+      <timeout>3</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>106</code>
+    <level>warning</level>
+    <description>cart_limit_reached</description>
+    <title>Whoops!</title>
+    <message>Maximum of ${cart_limit} per transaction</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" />
+      </buttons>
+      <timeout>3</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>107</code>
+    <level>warning</level>
+    <description>card_not_recognised</description>
+    <title>Whoops!</title>
+    <message>Card not recognized</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" />
+      </buttons>
+      <timeout>3</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>108</code>
+    <level>warning</level>
+    <description>too_small_spend</description>
+    <title>Whoops!</title>
+    <message>Minimum of ${cart_limit} per transaction</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" />
+      </buttons>
+      <timeout>3</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>109</code>
+    <level>warning</level>
+    <description>scanned_card_exists</description>
+    <title>Whoops!</title>
+    <message>This card has already been scanned and placed in your cart.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" />
+      </buttons>
+      <timeout>3</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>110</code>
+    <level>fatal</level>
+    <description>invalid_exchange_product</description>
+    <title>Invalid Configuration</title>
+    <message>Coin kiosks must have printable primary products.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" />
+      </buttons>
+      <timeout>3</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>111</code>
+    <level>fatal</level>
+    <description>no_charity_product</description>
+    <title>Invalid Configuration</title>
+    <message>No charity product defined for this kiosk.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" />
+      </buttons>
+      <timeout>3</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>666</code>
+    <level>error</level>
+    <description>unknown_error</description>
+    <title>Unknown error</title>
+  </error>
+  <error>
+    <code>120</code>
+    <level>error</level>
+    <description>transaction_submit_failure</description>
+    <title>Transaction failure</title>
+    <message>Transaction could not be completed</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>121</code>
+    <level>error</level>
+    <description>card_fund_failure</description>
+    <title>Card fund failure</title>
+    <message>Card could be funded</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>122</code>
+    <level>error</level>
+    <description>kiosk_uniqid_blank</description>
+    <title>Kiosk unique ID not given</title>
+    <message>Kiosk unique ID must be non-empty</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>123</code>
+    <level>error</level>
+    <description>scannable_card_lacks_number</description>
+    <title>Card number missing</title>
+    <message>Card number must be given for scannable products</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>124</code>
+    <level>error</level>
+    <description>card_debit_failure</description>
+    <title>Debit card failure</title>
+    <message>Debit from existing card failed</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>125</code>
+    <level>error</level>
+    <description>credit_card_invalid</description>
+    <title>Invalid credit card</title>
+    <message>Credit card details invalid</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>126</code>
+    <level>error</level>
+    <description>attempt_to_fund_blackhawk_card</description>
+    <title>Card fund failed</title>
+    <message>Attempt to fund wrong card type (Blackhawk) via API</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>127</code>
+    <level>error</level>
+    <description>no_stored_activations_available</description>
+    <title>No PIN available</title>
+    <message>No PINs were available for the specified product</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>128</code>
+    <level>error</level>
+    <description>attempt_to_acquire_pin_from_non_virtual_product</description>
+    <title>Product not virtual</title>
+    <message>PINs cannot be acquired for non virtual products</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>129</code>
+    <level>error</level>
+    <description>server_timeout</description>
+    <title>Server timed out</title>
+    <message>The server timed out. Please retry, or give up</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>130</code>
+    <level>error</level>
+    <description>no_stored_cards_available</description>
+    <title>Product not available</title>
+    <message>No cards were available for the specified product</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>  
+  <error>
+    <code>400</code>
+    <level>error</level>
+    <description>invalid_parameters</description>
+    <title>Invalid parameters</title>
+    <message>Invalid parameters. Please check parameters format.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>401</code>
+    <level>error</level>
+    <description>cant_send_sms_clickatell</description>
+    <title>Clickatell can't send SMS</title>
+    <message>Clickatell can't send SMS.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>402</code>
+    <level>error</level>
+    <description>merchant_connect_failure</description>
+    <title>API can't connect to Merchant API</title>
+    <message>API can't connect to Merchant API.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>408</code>
+    <level>error</level>
+    <description>merchant_make_transaction_fail</description>
+    <title>Merchant make transaction fail</title>
+    <message>Merchant make transaction fail.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>403</code>
+    <level>error</level>
+    <description>merchant_create_customer_fail</description>
+    <title>Merchant create customer fail</title>
+    <message>Merchant create customer fail.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>404</code>
+    <level>error</level>
+    <description>merchant_get_details_customer_fail</description>
+    <title>Merchant get customer details fail</title>
+    <message>Merchant get customer details fail.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>405</code>
+    <level>error</level>
+    <description>create_customer_fail</description>
+    <title>Create customer fail</title>
+    <message>Create customer fail.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>406</code>
+    <level>error</level>
+    <description>kiosk_not_found</description>
+    <title>Kiosk not found</title>
+    <message>This kiosk has not been configured on the host.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>407</code>
+    <level>error</level>
+    <description>customer_not_active</description>
+    <title>Customer not found</title>
+    <message>Customer not found.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>409</code>
+    <level>error</level>
+    <description>create_exchange_fail</description>
+    <title>Create exchange fail</title>
+    <message>Create exchange fail.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>410</code>
+    <level>error</level>
+    <description>authentication_fail</description>
+    <title>Authentication fail</title>
+    <message>Authentication fail.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>412</code>
+    <level>error</level>
+    <description>not_enough_money</description>
+    <title>Not enough money</title>
+    <message>You don't have enough money to make this transaction.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>415</code>
+    <level>warning</level>
+    <description>over_balance_limit</description>
+    <title>Over Balance Limit</title>
+    <message>Reached maximum balance limit</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>416</code>
+    <level>warning</level>
+    <description>over_daily_limit</description>
+    <title>Over Daily Limit</title>
+    <message>Reached daily load limit</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>417</code>
+    <level>warning</level>
+    <description>over_monthly_limit</description>
+    <title>Over Monthly Limit</title>
+    <message>Reached monthly load limit</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>450</code>
+    <level>error</level>
+    <description>verify_pin_fail</description>
+    <title>Verify PIN fail</title>
+    <message>Incorrect PIN</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>451</code>
+    <level>error</level>
+    <description>product_unavailable</description>
+    <title>Product Unavailable</title>
+    <message>The product cannot be purchased at this kiosk</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>452</code>
+    <level>warning</level>
+    <description>no_funds_to_clear</description>
+    <title>No Funds To Clear</title>
+    <message>There are no funds of that type to clear</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>500</code>
+    <level>error</level>
+    <description>no_host_group</description>
+    <title>No Host Group</title>
+    <message>There is no host group configured for this kiosk</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error> 
+  <error>
+    <code>501</code>
+    <level>error</level>
+    <description>note_payment_not_supported</description>
+    <title>Note payment unavailable for fixed value products</title>
+    <message>This product can not be purchased with notes</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+        <button label="OK" action="noop" data=""/>
+      </buttons>
+      <timeout>5</timeout>
+    </clienthandling>
+  </error>
+  <error>
+    <code>150</code>
+    <level>fatal</level>
+    <description>unknown_customer</description>
+    <title>Sorry for the inconvenience</title>
+    <message>Payment service is unavailable
+Customer verification failed</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+      </buttons>  
+      <timeout>7</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error> 
+  <error>
+    <code>151</code>
+    <level>fatal</level>
+    <description>pinpad_unavailable</description>
+    <title>Sorry for the inconvenience</title>
+    <message>Payment service is temporarily unavailable
+Please try again</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+      </buttons>  
+      <timeout>7</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error> 
+  <error>
+    <code>152</code>
+    <level>fatal</level>
+    <description>coin_unavailable</description>
+    <title>Sorry for the inconvenience</title>
+    <message>Coin Counting service is
+temporarily unavailable</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+      </buttons>  
+      <timeout>7</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>153</code>
+    <level>fatal</level>
+    <description>printer_unavailable</description>
+    <title>Sorry for the inconvenience</title>
+    <message>We were unable to print your receipt</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+      </buttons>  
+      <timeout>7</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>   
+  <error>
+    <code>154</code>
+    <level>fatal</level>
+    <description>printer_unavailable</description>
+    <title>Sorry for the inconvenience</title>
+    <message>Card printing service is
+temporarily unavailable</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+      </buttons>  
+      <timeout>7</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error> 
+  <error>
+    <code>155</code>
+    <level>fatal</level>
+    <description>coin_timeout</description>
+    <title>Sorry for the inconvenience</title>
+    <message>Coin Counting service is
+temporarily unavailable.
+Please try again.
+	</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+      </buttons>  
+      <timeout>7</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>156</code>
+    <level>fatal</level>
+    <description>pinpad_cancelled</description>
+    <title>Payment Cancelled</title>
+    <message>The card payment was cancelled</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+      </buttons>  
+      <timeout>7</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>157</code>
+    <level>fatal</level>
+    <description>token_timeout</description>
+    <title>Sorry - Internet connection timeout</title>
+    <message>Please try again.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+      </buttons>  
+      <timeout>7</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>158</code>
+    <level>fatal</level>
+    <description>note_unavailable</description>
+    <title>Sorry for the inconvenience</title>
+    <message>Note payments are
+temporarily unavailable.</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+      </buttons>
+      <timeout>7</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>159</code>
+    <level>error</level>
+    <description>pinpad_error</description>
+    <title>PIN Pad Error</title>
+    <message>There was a technical issue with the PIN Pad. Your card has not been charged.
+
+Error: ${reCo} - ${responseText}</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+      </buttons>
+      <timeout>7</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+  <error>
+    <code>2032</code>
+    <level>fatal</level>
+    <description>connection_error</description>
+    <title>Sorry - Internet connection is down</title>
+    <message>Please try again</message>
+    <clienthandling>
+      <silent>false</silent>
+      <buttons>
+      </buttons>  
+      <timeout>7</timeout>
+    </clienthandling>
+    <serverhandling></serverhandling>
+  </error>
+</errors>

@@ -1,0 +1,93 @@
+= GiVV Kiosk CHANGELOG
+
+== Version 1.7.5 (2015-10-19)
+* Fixed “Invalid Card” issue when swiping the card through a USB card reader (the “%” at the start of track 1 was being converted to “5”).
+* Fixed issue where the default Linx dropbox folder was set to “p:\givv-kiosk-cms
+* Fixed issue where the company name (currently GiVV or Linx) is not detected if the capitalisation of the filename in the lockdown configuration does not match the application filename.
+* Kiosk will now go out of order on startup if the application filename is not recognised
+  * The company name is detected from the filename, so this prevents odd things happening if the filename is incorrect.
+  * Error is logged to the host and the UI log
+* Improved error handling when the Payment Express PIN Pad is offline.
+  * At the moment we can only trap an issue when a customer attempts a payment
+  * Error message is now shown to the customer
+  * Notification is sent to Slack and error is shown in the CMS
+
+== Version 1.7.4 (2015-10-09)
+* Card payments can be disabled from the CMS
+  * Payment options overlay does not appear
+  * “Pay by Card” button is removed from the note payment notice overlay
+  * Note fees are applied to the cart by default.
+* Vault (Linx) card balance is validated as part of the cart review process
+  * Cards have to be removed if the transaction would go over the
+    * Balance limit
+    * Daily load limit
+    * Monthly load limit
+* Balance checks for Linx cards
+  * Cards can be scanned or swiped in the card reader
+* Added ability to override the default path to the application releases in the kiosk configuration file
+  * Can be used to set kiosks in the staging environment to use the “Release Candidate” software instead of the production version
+  * <releasePath>P:\givv-frontend\Release\_ReleaseCandidate</releasePath>
+* Fixes & tweaks
+  * Improved error message when the Dropbox files cannot be opened
+    * Was “Error loading prefix : [IOErrorEvent type="ioError" bubbles=false cancelable=false eventPhase=2 text="Error #2032"]"
+    * Now “Could not open Dropbox files"
+  * Fixed issue where the cart limit was set to $0 after cancelling a note payment
+
+== Version 1.7.3 (2015-09-29)
+* Added support for Indue scannable cards
+* Added support for Indue balance checks
+* Corrected "Unknown Error" message when starting a coin count and the Internet is not connected. It now says "Sorry – Internet connection error"
+
+== Version 1.7.2 (2015-09-02)
+* Fixed position of card image on single button home screen (Woolworths & Crown)
+
+== Version 1.7.1 (2015-08-24)
+* Fixed incorrect receipt printer connection log errors
+* Corrected capitalisation of "NOTES" and "CASH" on the payment options overlay.
+* Increased size of card images on the home screen buttons when there is only one button with two images
+* Product level minimum and maximum values are now enforced on the "Enter Value" overlay.
+
+== Version 1.7.0 (2015-07-14)
+* Upgraded from Flash V11 to V17 (Creative Cloud 2015)
+* Linx
+  * Created Linx themed user interface
+  * Created Linx receipt template
+* GiVV
+  * Removed Cash Advance warning from the payment options overlay
+  * Woolworths EDR overlay timeout increased to 30 seconds.
+* Unattended remote software updates (no more manual updates - yay!)
+  * Admin menu now contains an "Update Software" option that provides the details of the current software version and gives the option to manually upgrade or downgrade the version.
+  * Upgrading or downgrading the software can now be triggered from the CMS to occur within 10 minutes, or overnight.
+  * F11 now brings up the admin menu
+* Bug fixes & tweaks
+  * Attempting to clear notes or coins when there are none in the kiosk now returns an error of "No Funds To Clear. There are no funds of that type to clear". Instead of "Not enough money. You don't have enough money to make this transaction."
+  * Highlighted important log entries on the app startup so that they standout from the processing update lines
+  * Two button home screen layout now uses larger buttons (inline with the Linx design)
+  * Fixed issue in the UI log where a declined card payment was logged as authorised
+  * Added timeout to admin / operator / cash clearing pin entry screen
+  * The arrow buttons on the mini cart on the bottom of the choose screen now only appear when there are more than 4 items in the cart
+  * Card is now automatically selected on the choose screen if there is only one item in the selected category
+  * Added support for "Do Not Print" card stock (used for Linx).
+
+== Version 1.6.8 (2015-06-09)
+* Added extra logging around the coin counting process
+* Disabled the session timeout on the coin counting screen
+* Extended the timeout on the "count more coins" prompt from 20 to 45 seconds.
+
+== Version 1.6.7 (2015-05-26)
+* Improvements to Coin Counting
+  * Coin counts can now be added to before being finalised. The user is shown an "Are you finished?" prompt to confirm that no more coins need to be counted.
+  * Improved error handling and now prints a failure receipt when there are issues with the counter.
+  * The coin counter is always reset before a new count to ensure that a previous incomplete count is not carried over to the next customer.
+* The Operator card can no longer be used to disable "Out Of Order" mode on the kiosk. Only an Admin card or remote administration can be used to disable OOO mode.
+* Bug fixes
+  * Fixed application crash when a card print fails before a card has been read (bug from PR0103)
+  * Fixed issue where encodable products where shown on the customer receipt as Virtual products.
+
+== Version 1.6.6 (2015-05-12)
+* Fixed issue where an extra "undefined" product is added to the cart if the response to the Balance Update API message takes longer than 6 seconds.
+
+== Version 1.6.5 (2015-04-29)
+* Added timeout to the "You haven't put any coins in" dialog box for coin to card process
+* Removed the "Processing Fee" box from the card image when there is no fee (for coin to card)
+* Fixed issue where a print error while the card is printing is not detected by the UI.

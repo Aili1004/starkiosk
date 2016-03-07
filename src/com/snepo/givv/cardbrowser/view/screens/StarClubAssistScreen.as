@@ -35,12 +35,16 @@ package com.snepo.givv.cardbrowser.view.screens
 			var backIcon : MovieClip = new BackIcon();
 			addChild(backIcon);
 
-			backIcon.backBtn.addEventListener (MouseEvent.CLICK, closeCurrentPage);
+			backIcon.backBtn.addEventListener (MouseEvent.CLICK, goToKeyboardPage);
 		}
 
 		protected function closeCurrentPage( evt : MouseEvent ) : void
 		{
 			View.getInstance().currentScreenKey = View.HOME_SCREEN;
+		}
+		protected function goToKeyboardPage( evt : MouseEvent ) : void
+		{
+			View.getInstance().currentScreenKey = View.STAR_KEYBOARD_SCREEN;
 		}
 
 	}

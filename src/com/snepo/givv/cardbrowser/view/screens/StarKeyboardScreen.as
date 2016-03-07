@@ -21,16 +21,22 @@ package com.snepo.givv.cardbrowser.view.screens
 
 	public class StarKeyboardScreen extends Screen
 	{
-    protected var view : View;
 
+		var closeIcon : MovieClip = new CloseIcon();
     var starKeyboard : MovieClip = new StarKeyboard();
     var letterInputBox : MovieClip = new LetterInputBox();
 
 		public function StarKeyboardScreen ( )
 		{
+			addChild(closeIcon);
       addChild(starKeyboard);
       addChild(letterInputBox);
+			closeIcon.closeBtn.addEventListener ( MouseEvent.CLICK, closeCurrentPage );
       starKeyboard.addEventListener ( MouseEvent.CLICK, singleLetterClicked );
+		}
+
+		protected function closeCurrentPage(evt : MouseEvent) : void {
+			View.getInstance().currentScreenKey = View.HOME_SCREEN;
 		}
 
     protected function singleLetterClicked( evt : MouseEvent ) : void
@@ -44,7 +50,7 @@ package com.snepo.givv.cardbrowser.view.screens
         letterInputBox.unitNumber.text = letterInputBox.unitNumber.text.replace(lastChar, "");
 
       } else if (inputText == "NEXT") {
-				
+
 
       } else if (inputText == "space") {
           letterInputBox.unitNumber.text += " ";

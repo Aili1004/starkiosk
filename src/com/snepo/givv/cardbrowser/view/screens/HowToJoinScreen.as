@@ -21,12 +21,20 @@ package com.snepo.givv.cardbrowser.view.screens
 
 	public class HowToJoinScreen extends Screen
 	{
+		var closeIcon : MovieClip = new CloseIcon();
 
 		public function HowToJoinScreen ( )
 		{
 			var starJoinPage : MovieClip = new StarJoinPage();
 			addChild(starJoinPage);
+
+			addChild(closeIcon);
+			closeIcon.closeBtn.addEventListener ( MouseEvent.CLICK, closeCurrentPage );
 		}
 
+		protected function closeCurrentPage(evt : MouseEvent) : void
+		{
+			View.getInstance().currentScreenKey = View.HOME_SCREEN;
 		}
+	}
 }

@@ -165,7 +165,7 @@
 			dispatchEvent ( new ScreenEvent ( ScreenEvent.CHANGE, { newScreen : currentScreen.screenKey, oldScreen : ( oldScreen ? oldScreen.screenKey : null ) } ) );
 
 			// TODO, have the screen say whether it needs a logo or not
-			if ( currentScreen is HomeScreen ||
+			/*if ( currentScreen is HomeScreen ||
 				   currentScreen is CountingCoinsScreen ||
 			     currentScreen is OutOfOrderScreen ||
 					 currentScreen is ConfirmScreen )
@@ -176,7 +176,8 @@
 			{
 				showLogo(true);
 
-			}
+			}*/
+			showLogo(false);
 		}
 
 		public function get currentScreen ( ) : Screen
@@ -347,6 +348,7 @@
 			model.user.addEventListener ( UserEvent.BALANCE_CHANGED, updateBalanceIndicator );
 			model.user.addEventListener ( UserEvent.JOINED, updateBalanceIndicator );
 			model.user.addEventListener ( UserEvent.LEFT, updateBalanceIndicator );
+
 
 			invalidate();
 		}

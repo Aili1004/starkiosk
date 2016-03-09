@@ -1,0 +1,35 @@
+{emph_off}{bold_off}
+
+{center}
+{bold_on}${title}{bold_off}
+
+{left}
+----------------------------------------------
+
+{bold_on}Date:{bold_off} ${date}		{bold_on}Time:{bold_off}  ${time}{cr}
+{bold_on}Givv Card Kiosk ID:{bold_off} ${kiosk_id}{cr}
+{bold_on}Clearing ID:{bold_off} ${exchange_id}{cr}
+{bold_on}Operator:{bold_off} ${operator}{cr}
+{cr}
+${line_items}
+{cr}
+{cr}
+{cr}
+{cr}
+{cr}
+{cr}
+{cr}
+{cr}
+${barcode=n}
+{cr}
+{cr}
+{cr}
+{cr}
+{cr}
+{givvlogo}
+{cr}
+{cr}
+{cr}
+{cr}
+{cr}
+{cr}

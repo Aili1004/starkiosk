@@ -1,0 +1,20 @@
+{emph_off}{bold_off}
+{givvlogo}
+{cr}
+{cr}
+{cr}
+{cr}
+{left}
+----------------------------------------------{cr}
+{bold_on}Transaction Date :{bold_off} ${date_time}{cr}
+{bold_on}Givv Card Kiosk ID:{bold_off} ${kiosk_id}{cr}
+----------------------------------------------{cr}
+{cr}
+{cr}
+{cr}
+{cr}
+${message}
+{cr}
+{cr}
+{cr}
+{cr}

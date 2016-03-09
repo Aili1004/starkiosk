@@ -1,0 +1,26 @@
+<config appid="com.snepo.givv.cardbrowser.GivvCardBrowser">
+	<debugMode>true</debugMode>
+
+	<!dropboxPath>P:/givv-dev/</!dropboxPath>
+	<!!dropboxPath>p:/givv-kiosk-cms-dev/</!!dropboxPath>
+	
+	<paymentEndpoint>http://localhost:3000</paymentEndpoint>
+
+	<!paymentEndpoint>http://staging.givvkiosk.com</!paymentEndpoint>
+	<!dropboxPath>givv-kiosk-cms-dev/</!dropboxPath>
+
+	<dev>
+		<doNotPrint>true</doNotPrint>
+		<approveAllCardPayments>true</approveAllCardPayments>
+		<!serviceHost>10.0.10.107</!serviceHost>
+		<!serviceHost>192.168.1.113</!serviceHost>
+		<serviceHost>192.168.1.95</serviceHost>
+
+		<serviceHostDropboxPath>p:\givv-dev\</serviceHostDropboxPath>
+	</dev>
+	
+	<commTimeout>15</commTimeout>
+	<sessionTimeout>45</sessionTimeout>
+	<sessionExtensionTimeout>45</sessionExtensionTimeout>
+
+</config>

@@ -1,0 +1,22 @@
+{bold_on}
+=============================================={cr}
+    THERE WAS AN ERROR PRINTING YOUR CARDS{cr}
+{cr}
+{cr}
+{center}
+${error_text}
+{left}
+{cr}
+{cr}
+   Please contact Linx customer support on{cr}
+               + 1 866 420 2864{cr}
+=============================================={cr}
+{bold_off}
+{cr}
+{cr}
+{cr}
+{cr}
+{cr}
+{cr}
+{cr}
+{cr}

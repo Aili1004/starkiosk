@@ -1,0 +1,37 @@
+{emph_off}{bold_off}
+{coinlogo}
+
+{center}
+www.givvkiosk.com{cr}{cr}
+
+{left}
+----------------------------------------------
+
+{bold_on}Date:{bold_off} ${date}		{bold_on}Time:{bold_off}  ${time}{cr}
+{bold_on}Givv Card Kiosk ID:{bold_off} ${kiosk_id}{cr}
+{bold_on}Exchange ID:{bold_off} ${exchange_id}{cr}
+${errors}
+{cr}
+${line_items}
+{cr}
+{cr}
+{cr}
+{center}{bold_on}
+Thank you for using GiVV Coin Exchange{cr}
+Please retain this receipt{cr}
+{cr}
+{bold_off}
+For support please phone 1300 764 721
+{left}
+{cr}
+{cr}
+{cr}
+{cr}
+{cr}
+${barcode=n}
+{cr}
+
+
+
+
+

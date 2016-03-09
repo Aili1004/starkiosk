@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://givv-staging.heroku.com/schema/stock.rnc" type="application/relax-ng-compact-syntax"?>
+<stock created="2011-09-06T16:53:44-07:00">
+  <categories>
+    <category id="2">
+      <name>Department store cards</name>
+      <inclusionflag>2</inclusionflag>
+    </category>
+    <category id="1">
+      <name>Petrol pump cards</name>
+      <inclusionflag>1</inclusionflag>
+    </category>
+    <category id="3">
+      <name>Prepay Visa cards</name>
+      <inclusionflag>4</inclusionflag>
+    </category>
+    <category id="5">
+      <name>Sports</name>
+      <inclusionflag>8</inclusionflag>
+    </category>
+    <category id="6">
+      <name>Men's </name>
+      <inclusionflag>16</inclusionflag>
+    </category>
+  </categories>
+  <products>
+    <product id="1" active="true">
+      <categorybits>2</categorybits>
+      <name>David Jones</name>
+      <description/>
+      <priority/>
+      <denominations>
+        <denomination id="10" promotion="false">
+          <value>20.0</value>
+        </denomination>
+      </denominations>
+      <graphics>
+        <print>/images/icons/image_warning_full.png</print>
+        <screen>/images/icons/image_warning_full.png</screen>
+        <thumb>/images/icons/image_warning_thumb.png</thumb>
+        <icon>/images/icons/image_warning_icon.png</icon>
+      </graphics>
+    </product>
+    <product id="5" active="true">
+      <categorybits>2</categorybits>
+      <name>Myer</name>
+      <description>whatever</description>
+      <priority/>
+      <denominations>
+        <denomination id="1" promotion="false">
+          <value>300.0</value>
+          <price>400.0</price>
+        </denomination>
+        <denomination id="2" promotion="false">
+          <value>200.0</value>
+          <price>120.0</price>
+          <activeperiod>
+            <begin>2011-05-05</begin>
+            <end>2012-08-11</end>
+          </activeperiod>
+        </denomination>
+        <denomination id="3" promotion="false">
+          <value>50.0</value>
+        </denomination>
+        <denomination id="6" promotion="false">
+          <value>60.0</value>
+        </denomination>
+      </denominations>
+      <graphics>
+        <print>http://s3.amazonaws.com/givv-staging/5/Myer.jpg?1314340118</print>
+        <screen>http://s3.amazonaws.com/givv-staging/full/5/Myer.jpg?1314340118</screen>
+        <thumb>http://s3.amazonaws.com/givv-staging/thumb/5/Myer.jpg?1314340118</thumb>
+        <icon>http://s3.amazonaws.com/givv-staging/icon/5/Myer.jpg?1314340118</icon>
+      </graphics>
+    </product>
+    <product id="7" active="true">
+      <categorybits>1</categorybits>
+      <name>Esso petrol voucher</name>
+      <description>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</description>
+      <priority/>
+      <denominations>
+        <denomination id="11" promotion="false">
+          <value>200.0</value>
+        </denomination>
+      </denominations>
+      <graphics>
+        <print>http://s3.amazonaws.com/givv-staging/7/esso_logo_28929.jpg?1314947222</print>
+        <screen>http://s3.amazonaws.com/givv-staging/full/7/esso_logo_28929.jpg?1314947222</screen>
+        <thumb>http://s3.amazonaws.com/givv-staging/thumb/7/esso_logo_28929.jpg?1314947222</thumb>
+        <icon>http://s3.amazonaws.com/givv-staging/icon/7/esso_logo_28929.jpg?1314947222</icon>
+      </graphics>
+    </product>
+    <product id="9" active="true">
+      <categorybits>7</categorybits>
+      <name>Everything Bagel</name>
+      <description> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</description>
+      <priority/>
+      <denominations>
+        <denomination id="13" promotion="false">
+          <value>333.0</value>
+        </denomination>
+      </denominations>
+      <graphics>
+        <print>http://s3.amazonaws.com/givv-staging/9/IMG_1638-400x300.jpg?1314947432</print>
+        <screen>http://s3.amazonaws.com/givv-staging/full/9/IMG_1638-400x300.jpg?1314947432</screen>
+        <thumb>http://s3.amazonaws.com/givv-staging/thumb/9/IMG_1638-400x300.jpg?1314947432</thumb>
+        <icon>http://s3.amazonaws.com/givv-staging/icon/9/IMG_1638-400x300.jpg?1314947432</icon>
+      </graphics>
+    </product>
+    <product id="8" active="true">
+      <categorybits>4</categorybits>
+      <name>ANZ prepay card</name>
+      <description/>
+      <priority/>
+      <denominations>
+        <denomination id="12" promotion="false">
+          <value>2222.0</value>
+        </denomination>
+      </denominations>
+      <graphics>
+        <print>http://s3.amazonaws.com/givv-staging/8/ANZ_0.gif?1314947349</print>
+        <screen>http://s3.amazonaws.com/givv-staging/full/8/ANZ_0.gif?1314947349</screen>
+        <thumb>http://s3.amazonaws.com/givv-staging/thumb/8/ANZ_0.gif?1314947349</thumb>
+        <icon>http://s3.amazonaws.com/givv-staging/icon/8/ANZ_0.gif?1314947349</icon>
+      </graphics>
+    </product>
+    <product id="10" active="true">
+      <categorybits>8</categorybits>
+      <name>Rebel Sports</name>
+      <description>Rebel Sports Gift Card</description>
+      <priority/>
+      <denominations>
+        <denomination id="14" promotion="false">
+          <value>0.0</value>
+        </denomination>
+        <denomination id="15" promotion="false">
+          <value>0.0</value>
+        </denomination>
+        <denomination id="16" promotion="false">
+          <value>0.0</value>
+        </denomination>
+        <denomination id="17" promotion="false">
+          <value>0.0</value>
+        </denomination>
+        <denomination id="18" promotion="false">
+          <value>0.0</value>
+        </denomination>
+        <denomination id="19" promotion="false">
+          <value>0.0</value>
+        </denomination>
+      </denominations>
+      <graphics>
+        <print>http://s3.amazonaws.com/givv-staging/10/Greenwood Plaza 1 Day Sale.jpg?1315292638</print>
+        <screen>http://s3.amazonaws.com/givv-staging/full/10/2p4gbjhi0.jpg?1315292638</screen>
+        <thumb>http://s3.amazonaws.com/givv-staging/thumb/10/2p4gbjhi0.jpg?1315292638</thumb>
+        <icon>http://s3.amazonaws.com/givv-staging/icon/10/2p4gbjhi0.jpg?1315292638</icon>
+      </graphics>
+    </product>
+    <product id="11" active="true">
+      <categorybits>16</categorybits>
+      <name>Rebel Sports</name>
+      <description>Rebel Sport Gift Card</description>
+      <priority/>
+      <denominations>
+        <denomination id="20" promotion="false">
+          <value>0.0</value>
+        </denomination>
+        <denomination id="21" promotion="false">
+          <value>0.0</value>
+        </denomination>
+        <denomination id="22" promotion="false">
+          <value>0.0</value>
+        </denomination>
+        <denomination id="23" promotion="false">
+          <value>0.0</value>
+        </denomination>
+      </denominations>
+      <graphics>
+        <print>http://s3.amazonaws.com/givv-staging/11/2ow5rsxo1.jpg?1315293017</print>
+        <screen>http://s3.amazonaws.com/givv-staging/full/11/2ow5rsxo1.jpg?1315293017</screen>
+        <thumb>http://s3.amazonaws.com/givv-staging/thumb/11/2ow5rsxo1.jpg?1315293017</thumb>
+        <icon>http://s3.amazonaws.com/givv-staging/icon/11/2ow5rsxo1.jpg?1315293017</icon>
+      </graphics>
+    </product>
+  </products>
+</stock>

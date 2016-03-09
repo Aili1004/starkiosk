@@ -23,7 +23,7 @@
 		public var filterButtons : FilterButtonBar;
 		public var smallCart : SmallCart;
 		public var redeemBtn : MovieClip;
-
+		var closeIcon : MovieClip = new CloseIcon();
 
 		protected var instructionText : ChooseInstructionText;
 		protected var view : View;
@@ -34,12 +34,14 @@
 
 			_width = View.APP_WIDTH;
 			_height = View.APP_HEIGHT;
-
 		}
 
 		override protected function createUI ( ) : void
 		{
 			super.createUI();
+
+			addChild(closeIcon);
+			closeIcon.closeBtn.addEventListener (MouseEvent.CLICK, closeCurrentPage);
 
 			addChild(redeemBtn = new RedeemForCasinoDollarBtn());
 			redeemBtn.redeemCD.addEventListener ( MouseEvent.CLICK, redeemCDPage);
@@ -68,6 +70,11 @@
 			smallCart.x = 5;
 			smallCart.y = View.APP_HEIGHT - smallCart.height - 5;
 			addChild ( smallCart );
+		}
+
+		protected function closeCurrentPage (evt : MouseEvent) : void
+		{
+			View.getInstance().currentScreenKey = View.HOME_SCREEN;
 		}
 
 		protected function redeemCDPage ( evt : MouseEvent ) : void

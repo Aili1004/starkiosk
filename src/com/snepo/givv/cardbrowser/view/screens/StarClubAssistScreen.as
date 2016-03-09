@@ -26,6 +26,25 @@ package com.snepo.givv.cardbrowser.view.screens
 		{
 			var starClubAssistPage : MovieClip = new StarClubAssistPage();
 			addChild(starClubAssistPage);
+
+			var closeIcon : MovieClip = new CloseIcon();
+			addChild(closeIcon);
+
+			closeIcon.closeBtn.addEventListener ( MouseEvent.CLICK, closeCurrentPage );
+
+			var backIcon : MovieClip = new BackIcon();
+			addChild(backIcon);
+
+			backIcon.backBtn.addEventListener (MouseEvent.CLICK, goToKeyboardPage);
+		}
+
+		protected function closeCurrentPage( evt : MouseEvent ) : void
+		{
+			View.getInstance().currentScreenKey = View.HOME_SCREEN;
+		}
+		protected function goToKeyboardPage( evt : MouseEvent ) : void
+		{
+			View.getInstance().currentScreenKey = View.STAR_KEYBOARD_SCREEN;
 		}
 
 	}

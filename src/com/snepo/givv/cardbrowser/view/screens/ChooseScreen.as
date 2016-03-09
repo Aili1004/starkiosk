@@ -22,8 +22,9 @@
 		public var coverflow : Coverflow;
 		public var filterButtons : FilterButtonBar;
 		public var smallCart : SmallCart;
-		public var redeemBtn : MovieClip;
+		public var redeemForCD : MovieClip;
 		var closeIcon : MovieClip = new CloseIcon();
+		var logoutIcon : MovieClip = new LogoutIcon();
 
 		protected var instructionText : ChooseInstructionText;
 		protected var view : View;
@@ -40,11 +41,14 @@
 		{
 			super.createUI();
 
+			addChild(logoutIcon);
+			logoutIcon.logout.addEventListener(MouseEvent.CLICK, closeCurrentPage);
+
 			addChild(closeIcon);
 			closeIcon.closeBtn.addEventListener (MouseEvent.CLICK, closeCurrentPage);
 
-			addChild(redeemBtn = new RedeemForCasinoDollarBtn());
-			redeemBtn.redeemCD.addEventListener ( MouseEvent.CLICK, redeemCDPage);
+			addChild(redeemForCD = new RedeemForCD());
+			redeemForCD.redeemBtn.addEventListener ( MouseEvent.CLICK, redeemCDPage);
 
 			instructionText = new ChooseInstructionText();
 			instructionText.y = 125;

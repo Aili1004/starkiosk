@@ -24,9 +24,18 @@ package com.snepo.givv.cardbrowser.view.screens
 
 		public function ResponsibleGamblingScreen ( )
 		{
+			var closeIcon : MovieClip = new CloseIcon();
+			addChild(closeIcon);
+			closeIcon.closeBtn.addEventListener(MouseEvent.CLICK, closeCurrentPage);
+
 			var responsibleGamblingPage : MovieClip = new ResponsibleGamblingPage();
 			addChild(responsibleGamblingPage);
 		}
 
+		protected function closeCurrentPage(evt : MouseEvent) : void
+		{
+			View.getInstance().currentScreenKey = View.HOME_SCREEN;
 		}
+
+	}
 }

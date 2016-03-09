@@ -91,8 +91,9 @@
 			addChild(swipeCardImg);
 
 			starHome.HowToJoin.addEventListener ( MouseEvent.CLICK, showJoinPage );
-			starHome.printCard.addEventListener ( MouseEvent.CLICK, goToMainPage );
+			starHome.header.addEventListener ( MouseEvent.CLICK, goToMainPage );
 			starHome.starAssist.addEventListener ( MouseEvent.CLICK, starAssistPage );
+			starHome.responsibleGambling.addEventListener ( MouseEvent.CLICK, responsibleGamblingPage );
 
 			switch (buttonId)
 			{
@@ -205,6 +206,13 @@
 		{
 			view.currentScreenKey = View.STAR_CLUB_ASSIST_SCREEN;
 		}
+
+		protected function responsibleGamblingPage( evt : MouseEvent ) : void
+		{
+			view.currentScreenKey = View.RESPONSIBLE_GAMBLING_SCREEN;
+		}
+
+
 
 		protected function initFooterButtons ( ) : void
 		{

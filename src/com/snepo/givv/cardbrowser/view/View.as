@@ -34,6 +34,7 @@
 		public static const HOWTOJOIN_SCREEN : String = "View.HOWTOJOIN_SCREEN";
 		public static const STAR_KEYBOARD_SCREEN : String = "View.STAR_KEYBOARD_SCREEN";
 		public static const STAR_CLUB_ASSIST_SCREEN : String = "View.STAR_CLUB_ASSIST_SCREEN";
+		public static const RESPONSIBLE_GAMBLING_SCREEN : String = "View.RESPONSIBLE_GAMBLING_SCREEN";
 
 		public static const APP_WIDTH : int = 1024;
 		public static const APP_HEIGHT : int = 768;
@@ -208,6 +209,7 @@
 			registerScreen ( HOWTOJOIN_SCREEN, new HowToJoinScreen() );
 			registerScreen ( STAR_KEYBOARD_SCREEN , new StarKeyboardScreen() );
 			registerScreen ( STAR_CLUB_ASSIST_SCREEN, new StarClubAssistScreen());
+			registerScreen ( RESPONSIBLE_GAMBLING_SCREEN, new ResponsibleGamblingScreen());
 			if (model.outOfOrder)
 				currentScreenKey = OOO_SCREEN;
 			else
